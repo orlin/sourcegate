@@ -1,0 +1,25 @@
+{ "name": "sourcegate"
+, "description": "helps code look good before passing"
+, "keywords": [ "meta", "lint", "code", "rules" ]
+, "version": "0.0.0"
+, "repository":
+  { "type": "git"
+  , "url": "git://github.com/orlin/sourcegate.git"
+  }
+, "author": "Orlin M Bozhinov <om@soundsapiens.com>"
+, "main": "index"
+, "dependencies":
+  { "coffee-script": "*"
+  , "deepmerge": "*"
+  }
+, "devDependencies":
+  { "tape": "*"
+  , "underscore": "*"
+  , "findup-sync": "*"
+  }
+, "scripts": { "test": "test/coffee.coffee" }
+, "licenses":
+  [ { "type": "Unlicense"
+    , "url" : "http://unlicense.org/"
+    } ]
+}
