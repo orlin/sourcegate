@@ -10,14 +10,9 @@
 , "main": "index"
 , "dependencies":
   { "coffee-script": "*"
-  , "underscore": "*"
-  , "deepmerge": "*"
+  , "lodash": "*"
   }
-, "devDependencies":
-  { "tape": "*"
-  , "underscore": "*"
-  , "findup-sync": "*"
-  }
+, "devDependencies": { "tape": "*" }
 , "scripts": { "test": "test/coffee.coffee" }
 , "licenses":
   [ { "type": "Unlicense"

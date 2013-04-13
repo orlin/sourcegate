@@ -1,5 +1,4 @@
-_ = require "underscore"
-merge = require "deepmerge"
+_ = require "lodash"
 
 class SourceGate
 
@@ -19,7 +18,7 @@ class SourceGate
 
   # use of rules deep-merges the given over what's already present
   use: (over = {}) ->
-    @o = merge @o, over
+    @o = _.merge @o, over
     this # can chain use calls
 
 module.exports = new SourceGate
