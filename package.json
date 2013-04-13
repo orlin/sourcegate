@@ -10,6 +10,7 @@
 , "main": "index"
 , "dependencies":
   { "coffee-script": "*"
+  , "underscore": "*"
   , "deepmerge": "*"
   }
 , "devDependencies":
