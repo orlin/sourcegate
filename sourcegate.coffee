@@ -15,8 +15,10 @@ class SourceGate
     else @emptyness()
 
   # several items of stuff to get, return all when list is empty
-  says: (list = []) ->
-    _.pick @stuff, list
+  pick: (list = []) ->
+    return @stuff if _.isEmpty list
+    picked = _.pick @stuff, list
+    unless _.isEmpty picked then picked else @emptyness()
 
   # use of stuff deep-merges the given over what's already present
   use: (over = {}) ->
