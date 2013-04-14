@@ -12,8 +12,12 @@
   { "coffee-script": "*"
   , "lodash": "*"
   }
-, "devDependencies": { "tape": "*" }
-, "scripts": { "test": "test/coffee.coffee" }
+, "devDependencies":
+  { "trap": "*"
+  , "chai": "*"
+  , "trap-chai": "*"
+  }
+, "scripts": { "test": "test/sourcegate.coffee" }
 , "licenses":
   [ { "type": "Unlicense"
     , "url" : "http://unlicense.org/"

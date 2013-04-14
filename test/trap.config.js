@@ -1,0 +1,1 @@
+require("trap-chai").init()
