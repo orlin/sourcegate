@@ -2,25 +2,25 @@ _ = require "lodash"
 
 class SourceGate
 
-  rules: {}
-  default: {}
+  stuff: {}
+  emptyness: -> {}
 
-  # gets one set of rules, possibly deep-merges some first
-  # i.e. `o` overrides when `what` is an object
+  # can get only one item from all the stuff
+  # first, deep-merges any object into stuff, if that's what `what` is
   o: (what) ->
     if _.isString what
-      @rules[what] ? @default
+      @stuff[what] ? @emptyness()
     else if _.isObject what
       @use(what).o _.first _.keys what
-    else @default
+    else @emptyness()
 
-  # several sets of rules to follow, return all when list is empty
+  # several items of stuff to get, return all when list is empty
   says: (list = []) ->
-    _.pick @rules, list
+    _.pick @stuff, list
 
-  # use of rules deep-merges the given over what's already present
+  # use of stuff deep-merges the given over what's already present
   use: (over = {}) ->
-    @rules = _.merge @rules, over
+    @stuff = _.merge @stuff, over
     this # can chain `@use` calls
 
 module.exports = new SourceGate
