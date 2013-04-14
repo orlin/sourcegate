@@ -1,7 +1,7 @@
 { "name": "sourcegate"
-, "description": "helps code look good before passing"
-, "keywords": [ "meta", "lint", "code", "rules" ]
-, "version": "0.0.0"
+, "description": "have any object you want"
+, "keywords": [ "object" ]
+, "version": "0.0.1"
 , "repository":
   { "type": "git"
   , "url": "git://github.com/orlin/sourcegate.git"
@@ -10,14 +10,14 @@
 , "main": "index"
 , "dependencies":
   { "coffee-script": "*"
-  , "deepmerge": "*"
+  , "lodash": "*"
   }
 , "devDependencies":
-  { "tape": "*"
-  , "underscore": "*"
-  , "findup-sync": "*"
+  { "trap": "*"
+  , "chai": "*"
+  , "trap-chai": "*"
   }
-, "scripts": { "test": "test/coffee.coffee" }
+, "scripts": { "test": "test/sourcegate.coffee" }
 , "licenses":
   [ { "type": "Unlicense"
     , "url" : "http://unlicense.org/"

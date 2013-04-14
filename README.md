@@ -1,6 +1,6 @@
 # sourcegate [![Build Status](https://secure.travis-ci.org/orlin/sourcegate.png)](http://travis-ci.org/orlin/sourcegate)
 
-Helps code look good before passing.
+Have any object you want.
 
 
 ## Law
