@@ -1,7 +1,7 @@
 { "name": "sourcegate"
-, "description": "helps code look good before passing"
-, "keywords": [ "meta", "lint", "code", "rules" ]
-, "version": "0.0.0"
+, "description": "have any object you want"
+, "keywords": [ "object" ]
+, "version": "0.0.1"
 , "repository":
   { "type": "git"
   , "url": "git://github.com/orlin/sourcegate.git"
