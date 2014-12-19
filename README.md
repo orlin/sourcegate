@@ -1,7 +1,6 @@
-# sourcegate [![Build Status](https://secure.travis-ci.org/orlin/sourcegate.png)](http://travis-ci.org/orlin/sourcegate)
+# sourcegate [![Build Status](https://img.shields.io/travis/orlin/sourcegate.svg)](http://travis-ci.org/orlin/sourcegate)
 
 Have any object you want.
-
 
 ## Law
 
