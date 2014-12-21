@@ -1,4 +1,4 @@
-# sourcegate [![Build Status](https://img.shields.io/travis/orlin/sourcegate.svg)](http://travis-ci.org/orlin/sourcegate)
+# sourcegate [![Build Status](https://img.shields.io/travis/orlin/sourcegate.svg?style=flat)]()
 
 Have any object you want.
 
