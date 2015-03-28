@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.coffee"],"names":[],"mappings":"AAAA,IAAA,gBAAA;;AAAA,OAAA,CAAQ,oBAAR,CAA6B,CAAC,OAA9B,CAAA,CAAA,CAAA;;AAAA,MAEM,CAAC,OAAP,GAAiB,SAAA,GAAA;AACf,MAAA,IAAA;AAAA,EADgB,4DAChB,CAAA;SAAA,GADe;AAAA,CAFjB,CAAA","file":"index.js","sourceRoot":"/source/","sourcesContent":["require(\"source-map-support\").install()\n\nmodule.exports = (what...) ->\n  {}\n"]}
