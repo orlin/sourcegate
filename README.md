@@ -1,8 +1,8 @@
 # sourcegate [![Build Status](https://img.shields.io/travis/orlin/sourcegate.svg?style=flat)](https://travis-ci.org/orlin/sourcegate)
 
-Have any object you want.
+Have any config you want.
 
-## Law
+## Unlicensed
 
-This is free and unencumbered public domain software. For more information,
-see <http://unlicense.org/>.
+This is free and unencumbered public domain software.
+For more information, see [UNLICENSE](http://unlicense.org).
