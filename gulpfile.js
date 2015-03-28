@@ -22,7 +22,7 @@ var test = require('gulp-npm-test')(gulp, {
 })
 
 gulp.task('test:watch', function() {
-  require('gulp-watch')(['./index.js', 'test/*.spec.coffee'], test)
+  require('gulp-watch')(['index.js', 'test/*.spec.coffee'], test)
 })
 
 gulp.task('default', ['coffee', 'coffee:watch', 'test:watch'])
