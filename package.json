@@ -21,14 +21,13 @@
     "chai": "^2.2.0",
     "coffee-script": "^1.9.1",
     "gulp": "^3.8.11",
-    "gulp-coffee": "^2.3.1",
+    "gulp-npm-run": "0.0.0-3",
     "gulp-npm-test": "0.0.0-2",
-    "gulp-sourcemaps": "^1.5.1",
-    "gulp-util": "^3.0.4",
     "gulp-watch": "^4.2.1",
     "mocha": "^2.2.1"
   },
   "scripts": {
+    "build": "node_modules/.bin/coffee-inline-map -b -o index.js index.coffee",
     "test": "node_modules/.bin/mocha"
   },
   "licenses": [

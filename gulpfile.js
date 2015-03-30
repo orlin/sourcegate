@@ -1,18 +1,12 @@
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    coffee = require('gulp-coffee'),
-    sourcemaps = require('gulp-sourcemaps')
-
-gulp.task('coffee', function() {
-  gulp.src('./*.coffee')
-    .pipe(sourcemaps.init())
-    .pipe(coffee({bare: true}).on('error', gutil.log))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./'))
+var gulp = require('gulp-npm-run')(require('gulp'), {
+  exclude: ['test'],
+  include: {'build': 'Compile coffee with inline source-map.'},
+  require: ['build'],
+  requireStrict: true
 })
 
-gulp.task('coffee:watch', function(){
-  gulp.watch('./*.coffee', ['coffee'])
+gulp.task('build:watch', function(){
+  gulp.watch('*.coffee', ['build'])
 })
 
 // modify 'test'; reuse test fn for gulp test:watch
@@ -25,4 +19,4 @@ gulp.task('test:watch', function() {
   require('gulp-watch')(['index.js', 'test/*.spec.coffee'], test)
 })
 
-gulp.task('default', ['coffee', 'coffee:watch', 'test:watch'])
+gulp.task('dev', 'Develop ...', ['build', 'build:watch', 'test:watch'])
