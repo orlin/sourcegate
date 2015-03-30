@@ -20,6 +20,7 @@
   "devDependencies": {
     "beverage": "0.0.0-1",
     "chai": "^2.2.0",
+    "coffee-inline-map": "^0.7.0",
     "coffee-script": "^1.9.1",
     "gulp": "^3.8.11",
     "mocha": "^2.2.1"
