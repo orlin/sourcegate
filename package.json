@@ -18,12 +18,10 @@
     "lodash.merge": "^3.1.0"
   },
   "devDependencies": {
+    "beverage": "0.0.0-1",
     "chai": "^2.2.0",
     "coffee-script": "^1.9.1",
     "gulp": "^3.8.11",
-    "gulp-npm-run": "0.0.0-3",
-    "gulp-npm-test": "0.0.0-2",
-    "gulp-watch": "^4.2.1",
     "mocha": "^2.2.1"
   },
   "scripts": {
