@@ -1,25 +1,38 @@
-{ "name": "sourcegate"
-, "description": "have any object you want"
-, "keywords": [ "object" ]
-, "version": "0.0.1"
-, "repository":
-  { "type": "git"
-  , "url": "git://github.com/orlin/sourcegate.git"
-  }
-, "author": "Orlin M Bozhinov <om@soundsapiens.com>"
-, "main": "index"
-, "dependencies":
-  { "coffee-script": "*"
-  , "lodash": "*"
-  }
-, "devDependencies":
-  { "trap": "*"
-  , "chai": "*"
-  , "trap-chai": "*"
-  }
-, "scripts": { "test": "test/sourcegate.coffee" }
-, "licenses":
-  [ { "type": "Unlicense"
-    , "url" : "http://unlicense.org/"
-    } ]
+{
+  "name": "sourcegate",
+  "description": "merges / writes configuration to disk, for example .eslintrc",
+  "keywords": [
+    "configuration",
+    "merge",
+    "eslint",
+    "eslintrc"
+  ],
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orlin/sourcegate.git"
+  },
+  "author": "Orlin M Bozhinov <om@soundsapiens.com>",
+  "main": "index",
+  "dependencies": {
+    "lodash.merge": "^3.1.0"
+  },
+  "devDependencies": {
+    "beverage": "0.0.0-1",
+    "chai": "^2.2.0",
+    "coffee-inline-map": "^0.7.0",
+    "coffee-script": "^1.9.1",
+    "gulp": "^3.8.11",
+    "mocha": "^2.2.1"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/coffee-inline-map -b -o index.js index.coffee",
+    "test": "node_modules/.bin/mocha"
+  },
+  "licenses": [
+    {
+      "type": "Unlicense",
+      "url": "http://unlicense.org/"
+    }
+  ]
 }
