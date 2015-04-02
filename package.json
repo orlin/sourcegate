@@ -1,13 +1,14 @@
 {
   "name": "sourcegate",
-  "description": "merges / writes configuration to disk, for example .eslintrc",
+  "description": "have any object you want",
   "keywords": [
-    "configuration",
+    "json",
+    "objects",
+    "deep",
     "merge",
-    "eslint",
-    "eslintrc"
+    "configuration"
   ],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git://github.com/orlin/sourcegate.git"
