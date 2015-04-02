@@ -8,6 +8,9 @@ describe "sourcegate", ->
       expect(sg([])).to.eql {}
     it "given an array with a single object, returns that object", ->
       expect(sg([{a: "whatever"}])).to.eql {a: "whatever"}
+    it "given an array with a single file path, returns the contents", ->
+      expect(sg(["test/files/1.json"]))
+        .to.eql {a: 1, m: {b: 2}}
 
   describe "json / objects", ->
     it "can deep-merge objects", ->

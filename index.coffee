@@ -15,8 +15,9 @@ module.exports = (sources = []) ->
   unless sources.length > 0
     {}
   else
-    objects = read(sources)
-    if sources.length is 1
-      sources[0]
+    objects = read sources
+    if objects.length is 1
+      objects[0]
     else
+      objects.unshift {} # because merge mutates the first object
       merge.apply null, objects
