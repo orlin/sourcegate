@@ -1,6 +1,8 @@
-#!/usr/bin/env mocha
+path = require("path")
+[one, two] = sg(['1.json', '2.json'], {root: 'test/files', merge: false})
 
 describe "sourcegate", ->
+
   describe "odd cases", ->
     it "returns {} if given no arguments", ->
       expect(sg()).to.eql {}
@@ -10,7 +12,7 @@ describe "sourcegate", ->
       expect(sg([{a: "whatever"}])).to.eql {a: "whatever"}
     it "given an array with a single file path, returns the contents", ->
       expect(sg(["test/files/1.json"]))
-        .to.eql {a: 1, m: {b: 2}}
+        .to.eql one
 
   describe "json / objects", ->
     it "can deep-merge objects", ->
@@ -19,3 +21,13 @@ describe "sourcegate", ->
     it "can deep-merge json file objects", ->
       expect(sg(["test/files/1.json", "test/files/2.json"]))
         .to.eql {a: 1, m: {b: "2b", c: 3}}
+
+  describe "config opts", ->
+    it "can take a root path, relative by default", ->
+      expect(sg(['1.json'], {root: 'test/files'}))
+        .to.eql one
+    it "can take an absolute root path", ->
+      expect(sg(['2.json'],
+        root: path.join(process.cwd(), 'test/files'),
+        relative: false
+      )).to.eql two
