@@ -9,4 +9,4 @@ var gulp = require('beverage')(require('gulp'), {
   testWatch: ['index.js', 'test/*.spec.coffee']
 })
 
-gulp.task('dev', 'DEVELOP', ['build', 'build:watch', 'test:watch'])
+gulp.task('dev', 'DEVELOP', ['build', 'test', 'build:watch', 'test:watch'])
