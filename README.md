@@ -22,7 +22,7 @@ Sourcegate takes a second argument with the following default options:
   relative: true,
   merge: true,
   write: {
-    path: '', // a file name or path is required
+    path: '', // a file name or path is required to enable writing it
     options: {},
     root: process.cwd(),
     relative: true
