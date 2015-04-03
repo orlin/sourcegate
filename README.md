@@ -38,11 +38,12 @@ though it could be useful elsewhere for simply loading files to memory.
 
 The `write` is optional, enabled by `write.path`.  The `options` are handed to [node](https://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback).
 
-## Caveat Emptor
+## Missing
 
 Some day there may be an async implementation.  Restated:
 this is made for gulp workflow [beverage](https://github.com/orlin/beverage),
 and so far does not need async implementation.
+When it does, that would probably be `promise`-enabled.
 
 ## Test [![Build Status](https://img.shields.io/travis/orlin/sourcegate.svg?style=flat)](https://travis-ci.org/orlin/sourcegate)
 
