@@ -2,14 +2,17 @@ require("source-map-support").install()
 
 merge = require("lodash.merge")
 path = require("path")
-read = (sources, opts) ->
-  opts.relative ?= true
-  root =
-    if opts.relative and opts.root?
-      path.join process.cwd(), opts.root
-    else
-      opts.root || process.cwd()
+fs = require("fs")
 
+base = (root, relative) ->
+  relative ?= true
+  if relative and root?
+    path.join process.cwd(), root
+  else
+    root || process.cwd()
+
+read = (sources, opts) ->
+  root = base opts.root, opts.relative
   objects = []
   for source in sources
     if typeof source is "object"
@@ -18,18 +21,31 @@ read = (sources, opts) ->
       objects.push require(path.join(root, path.normalize(source)))
   objects
 
+write = (data, opts) ->
+  where = path.join(base(opts.root, opts.relative), path.normalize(opts.path))
+  fs.writeFileSync where, JSON.stringify(data, null, 2), opts.options
+  data
+
+
 module.exports = (sources = [], opts = {}) ->
-  unless sources.length > 0
-    {}
-  else
+  data = {}
+
+  if sources.length > 0
     objects = read sources, opts
     if objects.length is 1
-      objects[0]
+      data = objects[0]
     else
       opts.merge ?= true
       if opts.merge
         # merge mutates the first object
         objects.unshift {}
-        merge.apply null, objects
+        data = merge.apply null, objects
       else
-        objects
+        data = objects
+
+  if opts.write?.path?
+    opts.write.root ?= opts.root
+    opts.write.relative ?= opts.relative
+    write data, opts.write
+  else
+    data
