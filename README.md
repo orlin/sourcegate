@@ -2,7 +2,7 @@
 
 ## Use
 
-[![NPM](https://nodei.co/npm/sourcegate.png?mini=true)](https://www.npmjs.org/package/sourcegate)
+[![NPM](https://nodei.co/npm/sourcegate.png?compact=true)](https://www.npmjs.org/package/sourcegate)
 
 Give it an array of paths to json files, or js objects.
 They will be deep-merged, left to right, using `lodash.merge`.
