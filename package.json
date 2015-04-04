@@ -6,6 +6,7 @@
     "objects",
     "deep",
     "merge",
+    "write",
     "configuration"
   ],
   "version": "0.1.0",
