@@ -1,3 +1,4 @@
+fs = require("fs")
 path = require("path")
 [one, two] = sg(['1.json', '2.json'], {root: 'test/files', merge: false})
 
@@ -31,3 +32,11 @@ describe "sourcegate", ->
         root: path.join(process.cwd(), 'test/files'),
         relative: false
       )).to.eql two
+
+  describe "can write the result", ->
+    it "given a file path", ->
+      file = "test/files/out.json"
+      try fs.unlinkSync file
+      expect(sg(['1.json'], {root: 'test/files', write: {path: "out.json"}}))
+        .to.eql one
+      expect(JSON.parse(fs.readFileSync(file))).to.eql one
