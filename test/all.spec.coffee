@@ -1,3 +1,5 @@
+#!/usr/bin/env mocha
+
 fs = require("fs")
 path = require("path")
 [one, two] = sg(['1.json', '2.json'], {root: 'test/files', merge: false})
