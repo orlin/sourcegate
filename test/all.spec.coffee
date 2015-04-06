@@ -3,7 +3,6 @@
 fs = require("fs")
 path = require("path")
 [one, two] = sg(['1.json', '2.json'], {root: 'test/files', merge: false})
-outPath = "test/files/out.json"
 
 describe "sourcegate", ->
 
@@ -37,16 +36,29 @@ describe "sourcegate", ->
       )).to.eql two
 
   describe "-", ->
+    outPath = "test/files/out.json"
+    testWriteFiles = [
+      [ "can write the result given a file path",
+        ['1.json'],
+        {root: 'test/files', write: {path: "out.json"}},
+        one
+      ],
+      [ "can read json files without .json extension",
+        ['test/files/1.jsonrc'],
+        {write: {root: 'test/files', path: "out.json"}},
+        one
+      ],
+      [ "can require .js modules, same as .json",
+        ['test/files/2.js'],
+        {write: {root: 'test/files', path: "out.json"}},
+        two
+      ]
+    ]
 
     beforeEach -> try fs.unlinkSync outPath
     afterEach -> try fs.unlinkSync outPath
 
-    it "can write the result given a file path", ->
-      expect(sg(['1.json'], {root: 'test/files', write: {path: "out.json"}}))
-        .to.eql one
-      expect(JSON.parse(fs.readFileSync(outPath))).to.eql one
-
-    it "can read json files without .json extension", ->
-      expect(sg(['1.jsonrc'], {root: 'test/files', write: {path: "out.json"}}))
-        .to.eql one
-      expect(JSON.parse(fs.readFileSync(outPath))).to.eql one
+    for [nameTest, arg1, arg2, res] in testWriteFiles
+      it nameTest, ->
+        expect(sg(arg1, arg2)).to.eql res
+        expect(JSON.parse(fs.readFileSync(outPath))).to.eql res
