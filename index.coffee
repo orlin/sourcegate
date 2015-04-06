@@ -18,7 +18,14 @@ read = (sources, opts) ->
     if typeof source is "object"
       objects.push source
     else if typeof source is "string"
-      objects.push require(path.join(root, path.normalize(source)))
+      what = path.join(root, path.normalize(source))
+      try
+        if /\.js$/.test(what) || /\.json$/.test(what)
+          objects.push require(what)
+        else
+          objects.push JSON.parse(fs.readFileSync(what))
+      catch e
+        console.error e
   objects
 
 write = (data, opts) ->

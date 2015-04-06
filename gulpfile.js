@@ -2,10 +2,8 @@ var gulp = require('beverage')(require('gulp'), {
   scripts: {
     include: {'build': 'Compile coffee with inline source-map.'}
   },
-  buildWatch: ['*.coffee'],
-  test: {
-    testsRe: /\.spec\.coffee$/,
-  },
+  buildWatch: ['index.coffee'],
+  test: {},
   testWatch: ['index.js', 'test/*.spec.coffee']
 })
 
