@@ -20,7 +20,7 @@ read = (sources, opts) ->
     else if typeof source is "string"
       what = path.join(root, path.normalize(source))
       try
-        if /\.js$/.test(what) || /\.json$/.test(what)
+        if /\.js$/.test(what)
           objects.push require(what)
         else
           objects.push JSON.parse(fs.readFileSync(what))

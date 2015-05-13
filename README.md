@@ -12,6 +12,10 @@ var sg = require('sourcegate');
 var merged = sg(['initialize.json', 'customize/config.json', {c: 3}])
 ```
 
+If you are using this to write linter rules, and even if not,
+you should look into [hal-rc](https://github.com/orlin/hal-rc) or
+[beverage](https://github.com/orlin/beverage).
+
 ### Configure
 
 Sourcegate takes a second argument with the following default options:
@@ -42,10 +46,8 @@ unless they are explicitly made different.
 
 ## Missing
 
-Some day there may be an async implementation.  Restated:
-this is made for gulp workflow [beverage](https://github.com/orlin/beverage),
-and so far does not need async implementation.
-When it does, that would probably be `promise`-enabled.
+Some day there may be an async implementation.
+I so far use it only for workflow tasks, thus async hasn't been needed.
 
 ## Test [![Build Status](https://img.shields.io/travis/orlin/sourcegate.svg?style=flat)](https://travis-ci.org/orlin/sourcegate)
 
