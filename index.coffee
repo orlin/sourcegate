@@ -20,7 +20,7 @@ read = (sources, opts) ->
     else if typeof source is "string"
       what = path.join(root, path.normalize(source))
       try
-        if /\.js$/.test(what) || /\.json$/.test(what)
+        if /\.js$/.test(what)
           objects.push require(what)
         else
           objects.push JSON.parse(fs.readFileSync(what))
@@ -30,7 +30,7 @@ read = (sources, opts) ->
 
 write = (data, opts) ->
   where = path.join(base(opts.root, opts.relative), path.normalize(opts.path))
-  fs.writeFileSync where, JSON.stringify(data, null, 2), opts.options
+  fs.writeFileSync where, JSON.stringify(data, null, 2) + "\n", opts.options
   data
 
 
