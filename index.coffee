@@ -3,6 +3,7 @@ require("source-map-support").install()
 merge = require("lodash.merge")
 path = require("path")
 fs = require("fs")
+isThere = require("is-there")
 nocomments = require("strip-json-comments")
 
 base = (root, relative) ->
@@ -21,10 +22,11 @@ read = (sources, opts) ->
     else if typeof source is "string"
       what = path.join(root, path.normalize(source))
       try
-        if /\.js$/.test(what)
-          objects.push require(what)
-        else
-          objects.push JSON.parse(nocomments fs.readFileSync(what).toString())
+        if isThere what
+          if /\.js$/.test(what)
+            objects.push require(what)
+          else
+            objects.push JSON.parse(nocomments(fs.readFileSync(what).toString()))
       catch e
         console.error e
   objects
