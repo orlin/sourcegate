@@ -13,7 +13,7 @@ var merged = sg(['initialize.json', 'customize/config.json', {c: 3}])
 ```
 
 If you are using this to write linter rules, and even if not,
-you should look into [hal-rc](https://github.com/orlin/hal-rc) or
+you should look into [hal-rc](https://github.com/orlin/hal-rc) or best
 [beverage](https://github.com/orlin/beverage).
 
 ### Configure
