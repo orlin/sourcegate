@@ -1,8 +1,8 @@
 # sourcegate -- have any object you want
 
-## Use
-
 [![NPM](https://nodei.co/npm/sourcegate.png?compact=true)](https://www.npmjs.org/package/sourcegate)
+
+## Use
 
 Give it an array of paths to json files, or js objects.
 They will be deep-merged, left to right, using `lodash.merge`.
