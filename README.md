@@ -55,6 +55,11 @@ I so far use it only for workflow tasks, thus async hasn't been needed.
 npm test
 ```
 
+## Dependencies
+
+[![Dependency Status](https://david-dm.org/orlin/sourcegate.svg)](https://david-dm.org/orlin/sourcegate)
+[![devDependency Status](https://david-dm.org/orlin/sourcegate/dev-status.svg)](https://david-dm.org/orlin/sourcegate#info=devDependencies)
+
 ## Unlicensed
 
 This is free and unencumbered public domain software.
