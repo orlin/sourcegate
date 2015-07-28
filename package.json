@@ -18,18 +18,18 @@
   "author": "Orlin M Bozhinov <om@soundsapiens.com>",
   "main": "index",
   "dependencies": {
-    "is-there": "^2.0.0",
-    "lodash.merge": "^3.1.0",
-    "source-map-support": "^0.2.10",
+    "is-there": "^4.0.0",
+    "lodash.merge": "^3.3.2",
+    "source-map-support": "^0.3.2",
     "strip-json-comments": "^1.0.2"
   },
   "devDependencies": {
-    "beverage": "0.0.2",
-    "chai": "^2.2.0",
-    "coffee-inline-map": "^0.7.0",
-    "coffee-script": "^1.9.1",
-    "gulp": "^3.8.11",
-    "mocha": "^2.2.1"
+    "beverage": "0.0.3",
+    "chai": "^3.2.0",
+    "coffee-inline-map": "^0.8.0",
+    "coffee-script": "^1.9.3",
+    "gulp": "^3.9.0",
+    "mocha": "^2.2.5"
   },
   "scripts": {
     "build": "node_modules/.bin/coffee-inline-map -b -o index.js index.coffee",
