@@ -24,6 +24,10 @@ describe "sourcegate", ->
     it "can deep-merge json file objects", ->
       expect(sg(["test/files/1.json", "test/files/2.json"]))
         .to.eql {a: 1, m: {b: "2b", c: 3}}
+    it "can deep-merge arrays within objects", ->
+      expect(sg([{scripts: {require: ['something', 'other', 'more']}},
+                 {scripts: {require: ['merge']}}]))
+        .to.eql  {scripts: {require: ['something', 'other', 'more', 'merge']}}
 
   describe "config opts", ->
     it "can take a root path, relative by default", ->
