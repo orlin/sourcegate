@@ -1,4 +1,4 @@
-# sourcegate -- have any json object you want
+# sourcegate -- have any json you want
 
 [![NPM](https://nodei.co/npm/sourcegate.png?compact=true)](https://www.npmjs.org/package/sourcegate)
 
