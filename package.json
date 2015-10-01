@@ -1,9 +1,8 @@
 {
   "name": "sourcegate",
-  "description": "have any object you want",
+  "description": "have any json object you want",
   "keywords": [
     "json",
-    "objects",
     "deep",
     "merge",
     "write",
