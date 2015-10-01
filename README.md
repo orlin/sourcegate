@@ -42,7 +42,7 @@ though it could be useful elsewhere for simply loading files to memory.
 
 The `write` is optional, enabled by `write.path`.  The `options` are handed to [node](https://nodejs.org/api/fs.html#fs_fs_writefile_filename_data_options_callback).
 The `write.root` and `write.relative` are same as the ones used for reading,
-unless they are explicitly made different.
+unless explicitly made different.
 
 ## Missing
 
