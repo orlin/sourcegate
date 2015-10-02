@@ -5,9 +5,11 @@
     }
   },
   "causality": [
-    "build", ["index.coffee"],
-    "test", ["index.js", "test/*.spec.coffee"]
+    "build", ["index.coffee"]
   ],
+  "test": {
+    "watch": ["index.js", "test/*.spec.coffee"]
+  },
   "sourcegate": [
     {"recipe": "coffeelint", "preset": "coffeescript-style-guide"},
     {"recipe": "jshint"},

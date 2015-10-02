@@ -28,6 +28,7 @@
     "coffee-inline-map": "^0.8.0",
     "coffee-script": "^1.9.3",
     "gulp": "^3.9.0",
+    "gulp-npm-test": "0.0.2",
     "mocha": "^2.2.5"
   },
   "scripts": {
