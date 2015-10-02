@@ -47,8 +47,8 @@ module.exports = (sources = [], opts = {}) ->
     else
       opts.merge ?= true
       if opts.merge
-        # merge mutated the first object when lodash.merge was used
-        objects.unshift {} # just in case ...
+        # merge mutates, js code is full of mutations / side effects
+        objects.unshift {} # mutation bugs prevention - merge it all into {}
         data = merge.apply null, objects
       else
         data = objects

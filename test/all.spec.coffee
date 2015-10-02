@@ -28,9 +28,15 @@ describe "sourcegate", ->
       expect(sg([{scripts: {require: ['something', 'other', 'more']}},
                  {scripts: {require: ['merge']}}]))
         .to.eql  {scripts: {require: ['something', 'other', 'more', 'merge']}}
-    it "can sourcegate a sourcegate", ->
+    it "can sourcegate a sourcegate deep-merging", ->
       expect(sg([{b: 3, c: 3}, sg([{a: 2, b: 2}, {a: 1}])]))
         .to.eql {a: 1, b: 2, c: 3}
+    it "does merge without mutating the original objects", ->
+      a = {a: 1}
+      b = {b: 2}
+      expect(sg([a, b])).to.eql {a: 1, b: 2}
+      expect(a).to.eql {a: 1}
+      expect(b).to.eql {b: 2}
 
   describe "config opts", ->
     it "can take a root path, relative by default", ->
