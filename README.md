@@ -6,6 +6,10 @@
 
 Give it an array of paths to json files or objects.
 They will be deep-merged, left to right, using [n-deep-merge](https://github.com/eclifford/n-deep-merge).
+It does not mutate any given vars, instead returns a new object.
+Array merges have union semantics.
+Files not found are for now simply ignored.
+Comments are allowed in json files thanks to [strip-json-comments](https://www.npmjs.com/package/strip-json-comments).
 
 ```javascript
 var sg = require('sourcegate');
