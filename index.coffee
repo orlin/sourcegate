@@ -1,6 +1,6 @@
 require("source-map-support").install()
 
-merge = require("lodash.merge")
+merge = require("n-deep-merge")
 path = require("path")
 fs = require("fs")
 isThere = require("is-there")
@@ -47,8 +47,8 @@ module.exports = (sources = [], opts = {}) ->
     else
       opts.merge ?= true
       if opts.merge
-        # merge mutates the first object
-        objects.unshift {}
+        # merge mutated the first object when lodash.merge was used
+        objects.unshift {} # just in case ...
         data = merge.apply null, objects
       else
         data = objects

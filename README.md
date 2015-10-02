@@ -5,7 +5,7 @@
 ## Use
 
 Give it an array of paths to json files or objects.
-They will be deep-merged, left to right, using `lodash.merge`.
+They will be deep-merged, left to right, using [n-deep-merge](https://github.com/eclifford/n-deep-merge).
 
 ```javascript
 var sg = require('sourcegate');

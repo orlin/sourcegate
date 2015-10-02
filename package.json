@@ -18,7 +18,7 @@
   "main": "index",
   "dependencies": {
     "is-there": "^4.0.0",
-    "lodash.merge": "^3.3.2",
+    "n-deep-merge": "0.0.1",
     "source-map-support": "^0.3.2",
     "strip-json-comments": "^1.0.2"
   },

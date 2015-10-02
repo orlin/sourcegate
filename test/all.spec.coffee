@@ -29,7 +29,7 @@ describe "sourcegate", ->
                  {scripts: {require: ['merge']}}]))
         .to.eql  {scripts: {require: ['something', 'other', 'more', 'merge']}}
     it "can sourcegate a sourcegate", ->
-      expect(sg({b: 3, c: 3}, sg({a: 2, b: 2}, {a: 1})))
+      expect(sg([{b: 3, c: 3}, sg([{a: 2, b: 2}, {a: 1}])]))
         .to.eql {a: 1, b: 2, c: 3}
 
   describe "config opts", ->
