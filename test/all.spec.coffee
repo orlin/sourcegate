@@ -37,6 +37,11 @@ describe "sourcegate", ->
       expect(sg([a, b])).to.eql {a: 1, b: 2}
       expect(a).to.eql {a: 1}
       expect(b).to.eql {b: 2}
+    # the following can be fixed, though not worth the trouble
+    # regular expressions will probably get phased-out anyway
+    # globs (minimatch) seem easier and good-enough
+    it "keys can keep their string-to-become-regex values after merging", ->
+      expect(sg([{r: "regex"}, {a: [1, 2, 3]}])).to.eql {r: "regex", a: [1, 2, 3]}
 
   describe "config opts", ->
     it "can take a root path, relative by default", ->
