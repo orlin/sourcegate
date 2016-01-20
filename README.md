@@ -1,4 +1,4 @@
-# sourcegate [![dependencies](https://img.shields.io/david/orlin/sourcegate.svg?style=flat-square)](https://david-dm.org/orlin/sourcegate) [![build status](https://img.shields.io/travis/orlin/sourcegate.svg?style=flat-square)](http://travis-ci.org/orlin/sourcegate)
+# sourcegate [![build status](https://img.shields.io/travis/orlin/sourcegate.svg?style=flat-square)](http://travis-ci.org/orlin/sourcegate)
 
 [![NPM](https://nodei.co/npm/sourcegate.png?compact=true)](https://www.npmjs.org/package/sourcegate)
 
