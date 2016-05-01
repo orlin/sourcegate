@@ -44,7 +44,6 @@
     "name": "colon_assignment_spacing",
     "level": "warn",
     "spacing": {
-      "left": 0,
       "right": 1
     }
   },
@@ -111,6 +110,10 @@
     "name": "non_empty_constructor_needs_parens",
     "level": "ignore"
   },
+  "no_unnecessary_double_quotes": {
+    "name": "no_unnecessary_double_quotes",
+    "level": "ignore"
+  },
   "no_interpolation_in_single_quotes": {
     "level": "error"
   },
@@ -118,7 +121,6 @@
     "level": "error"
   },
   "braces_spacing": {
-    "spaces": 0,
     "level": "warn"
   }
 }

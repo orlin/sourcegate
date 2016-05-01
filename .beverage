@@ -11,7 +11,9 @@
     "watch": ["index.js", "test/*.spec.coffee"]
   },
   "sourcegate": [
-    {"recipe": "coffeelint", "preset": "coffeescript-style-guide"},
+    {"recipe": "coffeelint",
+     "preset": "coffeescript-style-guide"
+    },
     {"recipe": "jshint"},
     {"recipe": "jscs"}
   ]
