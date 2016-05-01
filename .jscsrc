@@ -1,5 +1,7 @@
 {
   "requirePaddingNewLinesBeforeLineComments": {
     "allExcept": "firstAfterCurly"
-  }
+  },
+  "requireTrailingComma": false,
+  "requireSemicolons": false
 }

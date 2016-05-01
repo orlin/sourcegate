@@ -12,7 +12,8 @@
   },
   "sourcegate": [
     {"recipe": "coffeelint",
-     "preset": "coffeescript-style-guide"
+     "preset": "hal-coffeescript-style-guide",
+     "module": "!"
     },
     {"recipe": "jshint"},
     {"recipe": "jscs"}
